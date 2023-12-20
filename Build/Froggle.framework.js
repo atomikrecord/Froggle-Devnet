@@ -42604,6 +42604,7 @@ class WalletConnectV2 {
 
 	async signTransaction(receiver, value, message, gasLimit) {
 		try {
+			await getAccount();
 			if (message.length > 0)
 				message = Buffer.from(message).toString('base64');
 
