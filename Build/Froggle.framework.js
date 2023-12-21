@@ -42322,6 +42322,7 @@ var sdk_core_out = __webpack_require__(3053);
 
 class WalletConnectV2 {
 	constructor() {
+		//this.chain = 'multiversx:1';
 		this.chain = 'multiversx:D';
 		this.chainID = this.chain.split(":")[1];
 
@@ -42372,6 +42373,8 @@ class WalletConnectV2 {
 		try {
 			this.connectCallback = connectCallback;
 			this.disconnectCallback = disconnectCallback;
+			//this.apiNetworkProvider = new ApiNetworkProvider("https://api.multiversx.com");
+			//this.proxyNetworkProvider = new ProxyNetworkProvider("https://gateway.multiversx.com");
 			this.apiNetworkProvider = new out/* ApiNetworkProvider */._l("https://devnet-api.multiversx.com");
 			this.proxyNetworkProvider = new out/* ProxyNetworkProvider */.mh("https://devnet-gateway.multiversx.com");
 
